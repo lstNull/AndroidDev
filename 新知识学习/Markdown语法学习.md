@@ -50,7 +50,7 @@ Markdown 的目标是实现「易读易写」。
 * 图片语法 : ![Alt text]（/path/to/img.jpg）  or ![Alt text]（/path/to/img.jpg "Optional title"）  ps:要注意输入法是中文还是英文~
 * ![测试图片](https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2005713706,4251751443&fm=21&gp=0.jpg “梦想小跑车MAZDA MX-5”)
 * 链接为：[]()
-* [测试](https://github.com/lstNull/AndroidDev/blob/master)
+* [测试](https://github.com/lstNull/AndroidDev)
 
 ## 粗体和斜体语法
 * Markdown 的粗体和斜体也非常简单，用两个 * 包含一段文本就是粗体的语法，用一个 * 包含一段文本就是斜体的语法。
@@ -64,9 +64,9 @@ Markdown 的目标是实现「易读易写」。
 | Item One       | Item Two       |
 ```
 * 示例
-| Header One     | Header Two     |
-| :------------- | :------------- |
-| Item One       | Item Two       |
+* | Header One     | Header Two     |
+* | :------------- | :------------- |
+* | Item One       | Item Two       |
 
 * 使用 tab 键即可缩进。
 * Atom编辑器直接可以输入code
