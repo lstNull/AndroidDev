@@ -45,8 +45,8 @@ Markdown 的目标是实现「易读易写」。
 
 ## 图片与链接语法
 * 插入链接与插入图片的语法很像，区别在一个 !号
-* 图片语法 : ![Alt text](/path/to/img.jpg)  or ![Alt text](/path/to/img.jpg "Optional title")
-![测试图片]（https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2005713706,4251751443&fm=21&gp=0.jpg “hello”）
+* 图片语法 : ![Alt text]（/path/to/img.jpg）  or ![Alt text]（/path/to/img.jpg "Optional title"）  ps:要注意输入法是中文还是英文~
+![测试图片](https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2005713706,4251751443&fm=21&gp=0.jpg “hello”)
 * 链接为：[]()
 [测试](https://github.com/lstNull/AndroidDev/blob/master)
 ## 粗体和斜体语法
