@@ -63,10 +63,11 @@ Markdown 的目标是实现「易读易写」。
 | :------------- | :------------- |
 | Item One       | Item Two       |
 ```
-* 示例
-* | Header One     | Header Two     |
-* | :------------- | :------------- |
-* | Item One       | Item Two       |
+* 示例  
+
+    | Header One     | Header Two     |
+    | :------------- | :------------- |
+    | Item One       | Item Two       |
 
 * 使用 tab 键即可缩进。
 * Atom编辑器直接可以输入code
