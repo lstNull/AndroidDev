@@ -28,3 +28,25 @@ Markdown 的目标是实现「易读易写」。
 ## ##二级标题
 ### ###三级标题
 以此类推可以写到6个######
+
+#### 列表语法
+###### 无序列表
+* * 1
+* * 2
+* * 3
+###### 有序列表
+1. 1.1
+2. 2.1
+3. 3.1
+
+## 引用语法
+* 只需要在文本前加入 > 这种尖括号（大于号）即可
+>  这里是引用  
+
+## 图片与链接语法
+* 插入链接与插入图片的语法很像，区别在一个 !号
+* 图片语法 : ![Alt text](/path/to/img.jpg)  or ![Alt text](/path/to/img.jpg "Optional title")
+![测试图片]（https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2005713706,4251751443&fm=21&gp=0.jpg “hello”）
+* 链接为：[]()
+[测试](https://github.com/lstNull/AndroidDev/blob/master)
+## 粗体和斜体语法
