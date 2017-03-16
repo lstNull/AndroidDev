@@ -1,6 +1,6 @@
-摘自http://itfeifei.win/2017/03/14/深入了解Java之类加载和案例分析/?utm_source=gank.io&utm_medium=email
+摘自:http://itfeifei.win/2017/03/14/深入了解Java之类加载和案例分析/?utm_source=gank.io&utm_medium=email
 
-##深入了解Java之类加载和案例分析
+## 深入了解Java之类加载和案例分析
 
 * 在讨论JVM内存区域分析之前，先来看一下Java程序具体执行的过程：
 * ![过程图](http://i1.piimg.com/567571/0282ddefcac2c362.png)
