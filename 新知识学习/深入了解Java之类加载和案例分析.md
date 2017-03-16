@@ -1,4 +1,5 @@
-\r\n摘自http://itfeifei.win/2017/03/14/深入了解Java之类加载和案例分析/?utm_source=gank.io&utm_medium=email
+摘自http://itfeifei.win/2017/03/14/深入了解Java之类加载和案例分析/?utm_source=gank.io&utm_medium=email
+
 ##深入了解Java之类加载和案例分析
 
 * 在讨论JVM内存区域分析之前，先来看一下Java程序具体执行的过程：
@@ -109,17 +110,13 @@ public class TestMain {
 ```
 #### 过程分析
 * public class TestMain
-
-\r\n通过JVM初始化加载；通过Class.forName()方法动态加载；通过ClassLoader.loadClass()方法动态加载通过以上方法加载这个类的时候，会从Bootstrap Loader（启动类加载器），Extended Loader（扩展类加载器）从上往下加载，发现都加载不了，最后由AppClass Loader从CLASSPATH中找到加载TestMain这个类,读取这个文件中的二进制数据,接着对这部分数据进行验证、准备、解析、初始化，最后会把这个类的类信息、常量、静态变量、以及编译器编译后的代码等存入运行时数据区中的方法区。
+通过JVM初始化加载；通过Class.forName()方法动态加载；通过ClassLoader.loadClass()方法动态加载通过以上方法加载这个类的时候，会从Bootstrap Loader（启动类加载器），Extended Loader（扩展类加载器）从上往下加载，发现都加载不了，最后由AppClass Loader从CLASSPATH中找到加载TestMain这个类,读取这个文件中的二进制数据,接着对这部分数据进行验证、准备、解析、初始化，最后会把这个类的类信息、常量、静态变量、以及编译器编译后的代码等存入运行时数据区中的方法区。
 
 * public void TestMethod()
-
-\r\nTestMethod 也被放入方法区。
+TestMethod 也被放入方法区。
 
 * Sample testSample = new Sample(" test ");
-
-\r\n先看”=”右边的：“new Sample(“ test “)”也是一个类跟上面一样，加载这个类的相关信息到方法区中，然后就是就是要在运行时数据区中的堆进行分配内存，方法区的类信息和堆怎么对应呢？其实堆只是存放了这个Sample实例的一个指向方法区的引用地址testSample，他主要是存放在运行时数据的Java虚拟机栈的栈帧中的局部变量表中”=”其实不是赋值，而是testSample这个变量指向了堆中的Sample实例
+先看”=”右边的：“new Sample(“ test “)”也是一个类跟上面一样，加载这个类的相关信息到方法区中，然后就是就是要在运行时数据区中的堆进行分配内存，方法区的类信息和堆怎么对应呢？其实堆只是存放了这个Sample实例的一个指向方法区的引用地址testSample，他主要是存放在运行时数据的Java虚拟机栈的栈帧中的局部变量表中”=”其实不是赋值，而是testSample这个变量指向了堆中的Sample实例
 
 * testSample.getName();
-
-\r\ntestSample指向了堆中Sample的实例，然后根据这个实例持有的引用拿到了方法区这个类的相关信息，其中的一个方法getName();接着执行这个方法打印数据 ]
+testSample指向了堆中Sample的实例，然后根据这个实例持有的引用拿到了方法区这个类的相关信息，其中的一个方法getName();接着执行这个方法打印数据 ]
